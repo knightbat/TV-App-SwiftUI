@@ -11,7 +11,7 @@ import SDWebImageSwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var seriesStore  = SeriesStore()
+    @ObservedObject var seriesStore  = APIStore(with: .listSeries)
     
     init() {
         UITableView.appearance().separatorStyle = .none
@@ -34,22 +34,35 @@ struct SeriesCell: View {
     
     var body: some View {
         NavigationLink(destination: DetailsView(series: series)) {
-            VStack(alignment: .center) {
-                WebImage(url: URL(string: (series.image?.medium ?? "")), placeholder: Image(systemName: "camera"))
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 350, height: 350, alignment: .center)
-                    .padding(5)
-                Text(String(series.name ?? ""))
+            ZStack(alignment: .topTrailing) {
+                VStack(alignment: .center) {
+                    WebImage(url: URL(string: (series.image?.medium ?? "")), placeholder: Image(systemName: "camera"))
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 350, height: 350, alignment: .center)
+                        .padding(5)
+                    Text(String(series.name ?? ""))
+                        .bold()
+                        .font(.largeTitle)
+                        .padding(1)
+                    
+                    Text(String(removeTags(from: series.summary)))
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
+                        .padding(5)
+                    
+                }
+                ZStack(alignment: .center) {
+                    Image(systemName: "star.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50, height: 50, alignment: .center)
+                        .foregroundColor(Color.yellow)
+                        .padding()
+                    Text(String.localizedStringWithFormat("%.1f", series.rating?.average ?? 0))
+                        .font(.system(size: 11))
                     .bold()
-                    .font(.largeTitle)
-                    .padding(1)
-                
-                Text(String(removeTags(from: series.summary)))
-                    .foregroundColor(.gray)
-                    .multilineTextAlignment(.leading)
-                    .padding(5)
-                
+                }
             }
             .background(Color.white)
             .cornerRadius(6)
@@ -68,7 +81,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
         let content = HomeView()
-        content.seriesStore.serieses = ApiMapper().getDummySeries()
+        content.seriesStore.serieses = SampleAPIResult.getDummySeries()
         return content
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EpisodeView: View {
     
-    @ObservedObject var episodeStore: EpisodeStore
+    @ObservedObject var episodeStore: APIStore
     @State var selectedSeason: Int
     var seasonArray: [Season]
     var seriesID: Int
@@ -19,7 +19,7 @@ struct EpisodeView: View {
         self.seriesID = seriesID
         self.seasonArray = seasonArray
         _selectedSeason = State(initialValue: selectedSeason)
-        self.episodeStore = EpisodeStore(with: seriesID)
+        self.episodeStore = APIStore(with: seriesID, type: .listEpisodes)
         UITableView.appearance().backgroundColor = .clear
            UITableViewCell.appearance().backgroundColor = .clear
     }
@@ -65,10 +65,10 @@ struct EpisodeView: View {
 
 struct EpisodeView_Previews: PreviewProvider {
     static var previews: some View {
-        let episodes = ApiMapper().getDummyEpisodes()
-        let seasons = ApiMapper().getDummySeasons()
+        let episodes = SampleAPIResult.getDummyEpisodes()
+        let seasons = SampleAPIResult.getDummySeasons()
         var view = EpisodeView(seriesID: 1, seasonArray: seasons, selectedSeason: 3)
-        let episodeStore = EpisodeStore()
+        let episodeStore = APIStore(with: .listEpisodes)
         episodeStore.episodes = episodes
         view.episodeStore = episodeStore
         return view

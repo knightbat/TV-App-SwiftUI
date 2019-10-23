@@ -9,15 +9,71 @@
 import SwiftUI
 import Combine
 
-class SeriesStore: ObservableObject {
+enum APIType {
+    case listSeries
+    case listseasons
+    case listEpisodes
+    case listCast
+}
+
+class APIStore: ObservableObject {
     
-    @Published var serieses: [Series] = [Series]()
+    @Published var serieses: [Series] = []
+    @Published var seasons: [Season] = []
+    @Published var episodes: [Episode] = []
+    @Published var casts: [CastCrew] = []
+    @Published var crews: [CastCrew] = []
+
+    
     
     init() {
-        fetchSeries()
+        serieses = []
+        seasons = []
+        episodes = []
+        casts = []
+        crews = []
     }
-    private func fetchSeries()  {
-        ApiMapper().getSeries { [weak self] (result) in
+    
+    init(with type: APIType) {
+        
+        switch type {
+        case .listSeries:
+            fetchSeries()
+        case .listseasons, .listEpisodes, .listCast:
+            print("wrong init method")
+        @unknown default:
+            print("Not implemented")
+        }
+        
+    }
+    
+    init(with id: Int, type:  APIType) {
+        guard id != 0 else { return }
+        
+        switch type {
+        case .listseasons:
+            fetchSeason(with: id)
+        case .listEpisodes:
+            fetchEpisodes(with: id)
+        case .listCast:
+            fetchCasts(with: id)
+        case .listSeries:
+            print("Wrong init method")
+        
+            
+        @unknown default:
+            print("Not implemented")
+            
+        }
+        
+    }
+    
+    private func fetchSeries(pageNumber: Int = 1)  {
+        
+        let params = [
+            ("page", String(pageNumber))
+        ]
+        ApiMapper().callAPI(withPath: AppData.show, params: params, andMappingModel: [Series].self) { [weak self] (result) in
             switch(result) {
             case .success(let serieses):
                 DispatchQueue.main.async {
@@ -28,20 +84,11 @@ class SeriesStore: ObservableObject {
             }
         }
     }
-}
-
-
-class SeasonStore: ObservableObject {
-    
-    @Published var seasons: [Season] = [Season]()
-    
-    init(with id: Int = 0) {
-        guard id != 0 else { return }
-        fetchSeason(with: id)
-    }
     
     private func fetchSeason(with id: Int)  {
-        ApiMapper().getSeasons(with: id) { [weak self] (result) in
+        
+        let path = "\(AppData.shows)\(id)\(AppData.season)"
+        ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [Season].self) { [weak self] (result) in
             switch(result) {
             case .success(let seasons):
                 DispatchQueue.main.async {
@@ -52,20 +99,11 @@ class SeasonStore: ObservableObject {
             }
         }
     }
-}
-
-
-class EpisodeStore: ObservableObject {
-    
-    @Published var episodes: [Episode] = [Episode]()
-    
-    init(with id: Int = 0) {
-        guard id != 0 else { return }
-        fetchEpisodes(with: id)
-    }
     
     private func fetchEpisodes(with id: Int)  {
-        ApiMapper().getEpisodes(with: id) { [weak self] (result) in
+        let path = "\(AppData.shows)\(id)\(AppData.episodes)"
+        
+        ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [Episode].self) { [weak self] (result) in
             switch(result) {
             case .success(let episodes):
                 DispatchQueue.main.async {
@@ -76,4 +114,19 @@ class EpisodeStore: ObservableObject {
             }
         }
     }
+    
+    private func fetchCasts(with id: Int)  {
+         let path = "\(AppData.shows)\(id)\(AppData.cast)"
+
+         ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [CastCrew].self) { [weak self] (result) in
+             switch(result) {
+             case .success(let casts):
+                 DispatchQueue.main.async {
+                     self?.casts = casts
+                 }
+             case .failure(_):
+                 break
+             }
+         }
+     }
 }

@@ -13,7 +13,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 import Foundation
 
-struct Person : Codable {
+struct Person : Codable, Identifiable {
 	let id : Int?
 	let url : String?
 	let name : String?
