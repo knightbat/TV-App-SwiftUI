@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		482157A023619ECE00C633DD /* crew.json in Resources */ = {isa = PBXBuildFile; fileRef = 4821579F23619ECE00C633DD /* crew.json */; };
 		483BDC2823600F9D004456FC /* SampleAPIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483BDC2723600F9D004456FC /* SampleAPIResult.swift */; };
 		483BDC2A23601CD9004456FC /* cast.json in Resources */ = {isa = PBXBuildFile; fileRef = 483BDC2923601CD9004456FC /* cast.json */; };
 		4846313A2359E64700BD8CA9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 484631392359E64700BD8CA9 /* SDWebImageSwiftUI */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4821579F23619ECE00C633DD /* crew.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = crew.json; sourceTree = "<group>"; };
 		483BDC2723600F9D004456FC /* SampleAPIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAPIResult.swift; sourceTree = "<group>"; };
 		483BDC2923601CD9004456FC /* cast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cast.json; sourceTree = "<group>"; };
 		486B93C623588DE800E982D8 /* TV-App-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TV-App-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 				48B61A8E235EDBD800A7DF15 /* episodes.json */,
 				48B61A90235EF97B00A7DF15 /* seasons.json */,
 				483BDC2923601CD9004456FC /* cast.json */,
+				4821579F23619ECE00C633DD /* crew.json */,
 				486B93D223588DEA00E982D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -241,6 +244,7 @@
 			files = (
 				48B61A91235EF97B00A7DF15 /* seasons.json in Resources */,
 				486B93D623588DEA00E982D8 /* LaunchScreen.storyboard in Resources */,
+				482157A023619ECE00C633DD /* crew.json in Resources */,
 				486B93D323588DEA00E982D8 /* Preview Assets.xcassets in Resources */,
 				48B61A8F235EDBD800A7DF15 /* episodes.json in Resources */,
 				48D2F03D235D8EB70091ADC8 /* show.json in Resources */,

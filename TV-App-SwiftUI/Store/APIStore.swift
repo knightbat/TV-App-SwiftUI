@@ -14,6 +14,7 @@ enum APIType {
     case listseasons
     case listEpisodes
     case listCast
+    case listCrew
 }
 
 class APIStore: ObservableObject {
@@ -57,6 +58,8 @@ class APIStore: ObservableObject {
             fetchEpisodes(with: id)
         case .listCast:
             fetchCasts(with: id)
+        case .listCrew:
+            fetchCrews(with: id)
         case .listSeries:
             print("Wrong init method")
         
@@ -123,6 +126,21 @@ class APIStore: ObservableObject {
              case .success(let casts):
                  DispatchQueue.main.async {
                      self?.casts = casts
+                 }
+             case .failure(_):
+                 break
+             }
+         }
+     }
+    
+    private func fetchCrews(with id: Int)  {
+         let path = "\(AppData.shows)\(id)\(AppData.crew)"
+
+         ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [CastCrew].self) { [weak self] (result) in
+             switch(result) {
+             case .success(let casts):
+                 DispatchQueue.main.async {
+                     self?.crews = casts
                  }
              case .failure(_):
                  break

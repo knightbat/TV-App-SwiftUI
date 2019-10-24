@@ -65,4 +65,17 @@ struct SampleAPIResult {
         }
         return []
     }
+    
+    static func getDummyCrew() -> [CastCrew] {
+          if let path = Bundle.main.path(forResource: "crew", ofType: "json") {
+              do {
+                  let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                  let jsonDecoder = JSONDecoder()
+                  let responseModel = try jsonDecoder.decode([CastCrew].self, from: data)
+                  return responseModel
+              } catch {
+              }
+          }
+          return []
+      }
 }

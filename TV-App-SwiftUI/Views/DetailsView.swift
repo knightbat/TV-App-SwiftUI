@@ -13,13 +13,15 @@ struct DetailsView: View {
     let series : Series
     @ObservedObject var seasonStore: APIStore
     @ObservedObject var castStore: APIStore
-    @State var isCast: Bool = true
+    @ObservedObject var crewStore: APIStore
+    @State private var isCast: Bool = true
 
     
     init(series: Series) {
         self.series = series
         seasonStore = APIStore(with: series.id ?? 0, type: .listseasons)
         castStore = APIStore(with: series.id ?? 0, type: .listCast)
+        crewStore = APIStore(with: series.id ?? 0, type: .listCrew)
     }
     
     var body: some View {
@@ -36,14 +38,10 @@ struct DetailsView: View {
                         
                         ImageView(image: series.image?.original ?? "")
                             .frame(width: 350, height: 350, alignment: .center)
-                        
                         DetailsInfoView(series: series)
-                        
                         SeasonListView(seasons: seasonStore.seasons, seriesID: self.series.id ?? 0)
-                        
                         CastCrewView(isCast: $isCast)
-                        
-                        CastCrewListView(cast: castStore.casts)
+                        CastCrewListView(casts: castStore.casts, crews: crewStore.crews, isCast: $isCast)
 
                     }
                 }
@@ -108,35 +106,34 @@ struct CastCrewView: View {
     
     var body: some View {
         HStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    self.isCast = true
-                }) {
+            Button(action: {
+                self.isCast = true
+            }) {
+                HStack {
+                    Spacer()
                     Text("Cast")
+                        .frame(height: 40)
+                    Spacer()
                 }
-                .frame(height: 40)
-                Spacer()
+                .background(isCast ? Color.white : Color.clear)
+                .cornerRadius(6)
+                .foregroundColor(isCast ? Color.black : Color.white)
             }
-            .background(isCast ? Color.white : Color.clear)
-            .cornerRadius(6)
-            .foregroundColor(isCast ? Color.black : Color.white)
-            
-            HStack {
-                Spacer()
-                
-                Button(action: {
-                    self.isCast = false
-                }) {
+            Button(action: {
+                self.isCast = false
+            }) {
+                HStack {
+                    Spacer()
                     Text("Crew")
+                        .frame(height: 40)
+                    Spacer()
                 }
-                .frame(height: 40)
-                Spacer()
+                .background(!isCast ? Color.white : Color.clear)
+                .cornerRadius(6)
+                .foregroundColor(!isCast ? Color.black : Color.white)
             }
-            .background(!isCast ? Color.white : Color.clear)
-            .cornerRadius(6)
-            .foregroundColor(!isCast ? Color.black : Color.white)
         }
+            
         .padding(.horizontal, 20)
     }
 }
@@ -179,23 +176,28 @@ struct IconImageView: View {
 
 struct CastCrewListView: View {
     
-    var cast: [CastCrew]
+    var casts: [CastCrew]
+    var crews: [CastCrew]
+    @Binding var isCast: Bool
+    
     var body: some View {
         VStack {
-            ForEach(cast) { cast in
+            ForEach(isCast ? casts : crews) { cast in
                 HStack{
                     IconImageView(image: cast.person?.image?.medium ?? "")
-                        .padding([.leading], 5)
+                        .padding([.leading, .top, .bottom], 5)
                     VStack(alignment: .leading, spacing: 10) {
                         Text(cast.person?.name ?? "")
                             .font(.headline)
-                        Text(cast.character?.name ?? "")
+                        Text((self.isCast ? cast.character?.name : cast.type) ?? "")
                             .font(.subheadline)
                     }
                     .padding([.leading], 5)
                     Spacer()
-                    IconImageView(image: cast.character?.image?.medium ?? "")
-                        .padding([.trailing], 5)
+                    if self.isCast {
+                        IconImageView(image: cast.character?.image?.medium ?? "")
+                            .padding([.trailing, .top, .bottom], 5)
+                    }
                 }
                 .background(Color.white.opacity(0.8))
                 .cornerRadius(6)
@@ -214,13 +216,13 @@ struct DetailsView_Previews: PreviewProvider {
         view.castStore = APIStore()
         view.seasonStore.seasons = SampleAPIResult.getDummySeasons()
         view.castStore.casts = SampleAPIResult.getDummyCasts()
-        
+        view.crewStore.crews = SampleAPIResult.getDummyCrew()
+
 //        let cell = CastCrewListView(cast: SampleAPIResult.getDummyCasts())
         
         return view
     }
 }
-
 
 
 
