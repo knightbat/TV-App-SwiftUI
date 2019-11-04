@@ -40,7 +40,7 @@ class APIStore: ObservableObject {
         switch type {
         case .listSeries:
             fetchSeries()
-        case .listseasons, .listEpisodes, .listCast:
+        case .listseasons, .listEpisodes, .listCast, .listCrew:
             print("wrong init method")
         @unknown default:
             print("Not implemented")

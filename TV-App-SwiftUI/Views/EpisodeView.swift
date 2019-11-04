@@ -21,7 +21,7 @@ struct EpisodeView: View {
         _selectedSeason = State(initialValue: selectedSeason)
         self.episodeStore = APIStore(with: seriesID, type: .listEpisodes)
         UITableView.appearance().backgroundColor = .clear
-           UITableViewCell.appearance().backgroundColor = .clear
+        UITableViewCell.appearance().backgroundColor = .clear
     }
     
     var body: some View {

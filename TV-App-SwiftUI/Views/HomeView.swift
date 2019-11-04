@@ -36,11 +36,15 @@ struct SeriesCell: View {
         NavigationLink(destination: DetailsView(series: series)) {
             ZStack(alignment: .topTrailing) {
                 VStack(alignment: .center) {
-                    WebImage(url: URL(string: (series.image?.medium ?? "")), placeholder: Image(systemName: "camera"))
-                        .resizable()
+                    WebImage(url: URL(string: (series.image?.medium ?? "")))
+                        .placeholder{Image(systemName: "camera")}
+                        .indicator(.activity)
+                        .animation(.easeInOut(duration: 0.5))
+                        .transition(.fade)
                         .scaledToFit()
-                        .frame(width: 350, height: 350, alignment: .center)
+                        .frame(maxWidth: UIScreen.main.bounds.width - 60, maxHeight: .infinity, alignment: .center)
                         .padding(5)
+                    
                     Text(String(series.name ?? ""))
                         .bold()
                         .font(.largeTitle)
@@ -83,5 +87,6 @@ struct ContentView_Previews: PreviewProvider {
         let content = HomeView()
         content.seriesStore.serieses = SampleAPIResult.getDummySeries()
         return content
+            .previewDevice("iPhone 7")
     }
 }

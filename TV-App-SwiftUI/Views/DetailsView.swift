@@ -91,14 +91,18 @@ struct DetailsInfoView: View {
 
 
 struct ImageView: View {
-     var image: String
-     var body: some View {
-         WebImage(url: URL(string: image), placeholder: Image(systemName: "camera"))
-             .resizable()
-             .scaledToFit()
-             .padding(5)
-     }
- }
+    var image: String
+    var body: some View {
+        WebImage(url: URL(string: image))
+            .placeholder{Image(systemName: "camera")}
+            .resizable()
+            .indicator(.activity)
+            .animation(.easeInOut(duration: 0.5))
+            .transition(.fade)
+            .scaledToFit()
+            .padding(5)
+    }
+}
 
 struct CastCrewView: View {
     
