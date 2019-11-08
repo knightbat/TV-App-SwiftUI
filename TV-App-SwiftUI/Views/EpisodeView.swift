@@ -31,6 +31,7 @@ struct EpisodeView: View {
                 .blur(radius: 30)
                 .scaledToFill()
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                .edgesIgnoringSafeArea(.all)
             
             VStack {
                 ScrollView(.horizontal, showsIndicators: false){
@@ -51,14 +52,52 @@ struct EpisodeView: View {
                 }.padding(20)
                 
                 
-                List(episodeStore.episodes.filter({$0.airedSeason == self.selectedSeason})){ episode in
-                    EpisodeCell(episode: episode)
-                        .listRowBackground(Color.red)
+                List{
+                    ForEach(episodeStore.episodes.filter({$0.airedSeason == self.selectedSeason})){ episode in
+                        EpisodeCell(episode: episode)
+                    }
                 }
-                .listRowBackground(Color.red)
             }
         }
     .navigationBarTitle(Text("Season: \(self.selectedSeason)"))
+    }
+}
+
+
+struct EpisodeCell: View {
+    var episode: Episode
+    @State var showPopup = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            Text("\(episode.episodeNumber ?? 0). \(episode.episodeName ?? "")")
+                .font(.title)
+            ImageView(image: episode.image?.original ?? "")
+            HStack {
+                Text("Run time:")
+                    .bold()
+                Text("\(episode.runtime ?? 0) hrs")
+            }
+            HStack {
+                Text("Aired date:")
+                    .bold()
+                Text("\(episode.airdate ?? "")")
+            }
+            HStack(alignment: .top) {
+                Text("Summary:")
+                    .bold()
+                Text(removeTags(from: episode.summary ?? ""))
+                    .lineLimit(10)
+            }
+        }
+        .foregroundColor(Color.white)
+        .padding(10)
+        .background(Color.gray.opacity(0.8))
+        .cornerRadius(6)
+        .onTapGesture { self.showPopup = true }
+        .sheet(isPresented: self.$showPopup) {
+            SingleEpisodeView(episode: self.episode)
+        }
     }
 }
 
@@ -72,30 +111,5 @@ struct EpisodeView_Previews: PreviewProvider {
         episodeStore.episodes = episodes
         view.episodeStore = episodeStore
         return view
-    }
-}
-
-struct EpisodeCell: View {
-    var episode: Episode
-    var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text("\(episode.episodeNumber ?? 0). \(episode.episodeName ?? "")")
-                .font(.title)
-            ImageView(image: episode.image?.original ?? "")
-            HStack {
-                Text("Run time:")
-                    .bold()
-                Text("\(episode.runtime ?? 0) hrs")
-            }
-            HStack(alignment: .top) {
-                Text("Summary:")
-                    .bold()
-                Text(removeTags(from: episode.summary ?? ""))
-            }
-        }
-        .foregroundColor(Color.white)
-        .padding(10)
-        .background(Color.gray.opacity(0.8))
-        .cornerRadius(6)
     }
 }

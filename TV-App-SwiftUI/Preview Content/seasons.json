@@ -1,1 +1,222 @@
-[{"id":8,"url":"http://www.tvmaze.com/seasons/8/arrow-season-1","number":1,"name":"","episodeOrder":23,"premiereDate":"2012-10-10","endDate":"2013-05-15","network":{"id":5,"name":"The CW","country":{"name":"United States","code":"US","timezone":"America/New_York"}},"webChannel":null,"image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/24/60357.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/24/60357.jpg"},"summary":"<p>Oliver Queen returns to Starling city after being deserted on a hellish island for five years. He decides to become a mask wearing vigilante to fulfil his father's wishes and rid the city of crime. In his journey to do so, he is forced to make tough decisions even as he makes new friends and even more enemies which continue question his lethal ways of controlling crime.</p>","_links":{"self":{"href":"http://api.tvmaze.com/seasons/8"}}},{"id":9,"url":"http://www.tvmaze.com/seasons/9/arrow-season-2","number":2,"name":"","episodeOrder":23,"premiereDate":"2013-10-09","endDate":"2014-05-14","network":{"id":5,"name":"The CW","country":{"name":"United States","code":"US","timezone":"America/New_York"}},"webChannel":null,"image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/24/60558.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/24/60558.jpg"},"summary":"<p>At the end of Season 1, Starling city suffered a huge loss and so did Oliver Queen. Learning from his mistakes, Oliver decides to change his methods even while honouring his promises to his friend. Meanwhile a new enemy from his past resurfaces to make life difficult for Oliver.</p>","_links":{"self":{"href":"http://api.tvmaze.com/seasons/9"}}},{"id":10,"url":"http://www.tvmaze.com/seasons/10/arrow-season-3","number":3,"name":"","episodeOrder":23,"premiereDate":"2014-10-08","endDate":"2015-05-13","network":{"id":5,"name":"The CW","country":{"name":"United States","code":"US","timezone":"America/New_York"}},"webChannel":null,"image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/24/60559.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/24/60559.jpg"},"summary":"<p>Having achieved true hero status - Oliver Queen faces new challenges with a foe who has come back from the dead. This time, he has help in the form a new hero/side kick and a lot of familiar faces. There is also a new player - Ray Palmer (future atom) - in the mix, who has a new vision for turning Starling City into Star City.</p>","_links":{"self":{"href":"http://api.tvmaze.com/seasons/10"}}},{"id":7957,"url":"http://www.tvmaze.com/seasons/7957/arrow-season-4","number":4,"name":"","episodeOrder":23,"premiereDate":"2015-10-07","endDate":"2016-05-25","network":{"id":5,"name":"The CW","country":{"name":"United States","code":"US","timezone":"America/New_York"}},"webChannel":null,"image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/157/394197.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/157/394197.jpg"},"summary":"<p>As Oliver tries to leave his life as The Arrow behind, a new enemy named Damien Darhk begins to destroy his life, forcing him back into action.</p>","_links":{"self":{"href":"http://api.tvmaze.com/seasons/7957"}}},{"id":47958,"url":"http://www.tvmaze.com/seasons/47958/arrow-season-5","number":5,"name":"","episodeOrder":23,"premiereDate":"2016-10-05","endDate":"2017-05-24","network":{"id":5,"name":"The CW","country":{"name":"United States","code":"US","timezone":"America/New_York"}},"webChannel":null,"image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/157/394203.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/157/394203.jpg"},"summary":null,"_links":{"self":{"href":"http://api.tvmaze.com/seasons/47958"}}},{"id":59840,"url":"http://www.tvmaze.com/seasons/59840/arrow-season-6","number":6,"name":"","episodeOrder":23,"premiereDate":"2017-10-12","endDate":"2018-05-17","network":{"id":5,"name":"The CW","country":{"name":"United States","code":"US","timezone":"America/New_York"}},"webChannel":null,"image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/157/394198.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/157/394198.jpg"},"summary":null,"_links":{"self":{"href":"http://api.tvmaze.com/seasons/59840"}}},{"id":83181,"url":"http://www.tvmaze.com/seasons/83181/arrow-season-7","number":7,"name":"","episodeOrder":22,"premiereDate":"2018-10-15","endDate":"2019-05-13","network":{"id":5,"name":"The CW","country":{"name":"United States","code":"US","timezone":"America/New_York"}},"webChannel":null,"image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/187/469822.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/187/469822.jpg"},"summary":null,"_links":{"self":{"href":"http://api.tvmaze.com/seasons/83181"}}},{"id":94578,"url":"http://www.tvmaze.com/seasons/94578/arrow-season-8","number":8,"name":"","episodeOrder":10,"premiereDate":"2019-10-15","endDate":"2019-11-26","network":{"id":5,"name":"The CW","country":{"name":"United States","code":"US","timezone":"America/New_York"}},"webChannel":null,"image":null,"summary":null,"_links":{"self":{"href":"http://api.tvmaze.com/seasons/94578"}}}]
+[{
+    "id": 8,
+    "url": "http://www.tvmaze.com/seasons/8/arrow-season-1",
+    "number": 1,
+    "name": "",
+    "episodeOrder": 23,
+    "premiereDate": "2012-10-10",
+    "endDate": "2013-05-15",
+    "network": {
+        "id": 5,
+        "name": "The CW",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        }
+    },
+    "webChannel": null,
+    "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/24/60357.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/24/60357.jpg"
+    },
+    "summary": "<p>Oliver Queen returns to Starling city after being deserted on a hellish island for five years. He decides to become a mask wearing vigilante to fulfil his father's wishes and rid the city of crime. In his journey to do so, he is forced to make tough decisions even as he makes new friends and even more enemies which continue question his lethal ways of controlling crime.</p>",
+    "_links": {
+        "self": {
+            "href": "http://api.tvmaze.com/seasons/8"
+        }
+    }
+}, {
+    "id": 9,
+    "url": "http://www.tvmaze.com/seasons/9/arrow-season-2",
+    "number": 2,
+    "name": "",
+    "episodeOrder": 23,
+    "premiereDate": "2013-10-09",
+    "endDate": "2014-05-14",
+    "network": {
+        "id": 5,
+        "name": "The CW",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        }
+    },
+    "webChannel": null,
+    "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/24/60558.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/24/60558.jpg"
+    },
+    "summary": "<p>At the end of Season 1, Starling city suffered a huge loss and so did Oliver Queen. Learning from his mistakes, Oliver decides to change his methods even while honouring his promises to his friend. Meanwhile a new enemy from his past resurfaces to make life difficult for Oliver.</p>",
+    "_links": {
+        "self": {
+            "href": "http://api.tvmaze.com/seasons/9"
+        }
+    }
+}, {
+    "id": 10,
+    "url": "http://www.tvmaze.com/seasons/10/arrow-season-3",
+    "number": 3,
+    "name": "",
+    "episodeOrder": 23,
+    "premiereDate": "2014-10-08",
+    "endDate": "2015-05-13",
+    "network": {
+        "id": 5,
+        "name": "The CW",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        }
+    },
+    "webChannel": null,
+    "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/24/60559.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/24/60559.jpg"
+    },
+    "summary": "<p>Having achieved true hero status - Oliver Queen faces new challenges with a foe who has come back from the dead. This time, he has help in the form a new hero/side kick and a lot of familiar faces. There is also a new player - Ray Palmer (future atom) - in the mix, who has a new vision for turning Starling City into Star City.</p>",
+    "_links": {
+        "self": {
+            "href": "http://api.tvmaze.com/seasons/10"
+        }
+    }
+}, {
+    "id": 7957,
+    "url": "http://www.tvmaze.com/seasons/7957/arrow-season-4",
+    "number": 4,
+    "name": "",
+    "episodeOrder": 23,
+    "premiereDate": "2015-10-07",
+    "endDate": "2016-05-25",
+    "network": {
+        "id": 5,
+        "name": "The CW",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        }
+    },
+    "webChannel": null,
+    "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/157/394197.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/157/394197.jpg"
+    },
+    "summary": "<p>As Oliver tries to leave his life as The Arrow behind, a new enemy named Damien Darhk begins to destroy his life, forcing him back into action.</p>",
+    "_links": {
+        "self": {
+            "href": "http://api.tvmaze.com/seasons/7957"
+        }
+    }
+}, {
+    "id": 47958,
+    "url": "http://www.tvmaze.com/seasons/47958/arrow-season-5",
+    "number": 5,
+    "name": "",
+    "episodeOrder": 23,
+    "premiereDate": "2016-10-05",
+    "endDate": "2017-05-24",
+    "network": {
+        "id": 5,
+        "name": "The CW",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        }
+    },
+    "webChannel": null,
+    "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/157/394203.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/157/394203.jpg"
+    },
+    "summary": null,
+    "_links": {
+        "self": {
+            "href": "http://api.tvmaze.com/seasons/47958"
+        }
+    }
+}, {
+    "id": 59840,
+    "url": "http://www.tvmaze.com/seasons/59840/arrow-season-6",
+    "number": 6,
+    "name": "",
+    "episodeOrder": 23,
+    "premiereDate": "2017-10-12",
+    "endDate": "2018-05-17",
+    "network": {
+        "id": 5,
+        "name": "The CW",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        }
+    },
+    "webChannel": null,
+    "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/157/394198.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/157/394198.jpg"
+    },
+    "summary": null,
+    "_links": {
+        "self": {
+            "href": "http://api.tvmaze.com/seasons/59840"
+        }
+    }
+}, {
+    "id": 83181,
+    "url": "http://www.tvmaze.com/seasons/83181/arrow-season-7",
+    "number": 7,
+    "name": "",
+    "episodeOrder": 22,
+    "premiereDate": "2018-10-15",
+    "endDate": "2019-05-13",
+    "network": {
+        "id": 5,
+        "name": "The CW",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        }
+    },
+    "webChannel": null,
+    "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/187/469822.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/187/469822.jpg"
+    },
+    "summary": null,
+    "_links": {
+        "self": {
+            "href": "http://api.tvmaze.com/seasons/83181"
+        }
+    }
+}, {
+    "id": 94578,
+    "url": "http://www.tvmaze.com/seasons/94578/arrow-season-8",
+    "number": 8,
+    "name": "",
+    "episodeOrder": 10,
+    "premiereDate": "2019-10-15",
+    "endDate": "2019-11-26",
+    "network": {
+        "id": 5,
+        "name": "The CW",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        }
+    },
+    "webChannel": null,
+    "image": null,
+    "summary": null,
+    "_links": {
+        "self": {
+            "href": "http://api.tvmaze.com/seasons/94578"
+        }
+    }
+}]

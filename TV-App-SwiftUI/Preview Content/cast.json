@@ -1,1 +1,925 @@
-[{"person":{"id":271,"url":"http://www.tvmaze.com/people/271/stephen-amell","name":"Stephen Amell","country":{"name":"Canada","code":"CA","timezone":"America/Halifax"},"birthday":"1981-05-08","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/42/106974.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/42/106974.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/271"}}},"character":{"id":202,"url":"http://www.tvmaze.com/characters/202/arrow-oliver-queen-the-hood-the-arrow-green-arrow","name":"Oliver Queen / The Hood / The Arrow / Green Arrow","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/44.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/44.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/202"}}},"self":false,"voice":false},{"person":{"id":274,"url":"http://www.tvmaze.com/people/274/david-ramsey","name":"David Ramsey","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1971-11-17","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/1/2927.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/1/2927.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/274"}}},"character":{"id":205,"url":"http://www.tvmaze.com/characters/205/arrow-john-diggle-spartan","name":"John Diggle / Spartan","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/46.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/46.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/205"}}},"self":false,"voice":false},{"person":{"id":276,"url":"http://www.tvmaze.com/people/276/emily-bett-rickards","name":"Emily Bett Rickards","country":{"name":"Canada","code":"CA","timezone":"America/Halifax"},"birthday":"1991-07-24","deathday":null,"gender":"Female","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/2/6079.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/2/6079.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/276"}}},"character":{"id":207,"url":"http://www.tvmaze.com/characters/207/arrow-felicity-smoak-overwatch","name":"Felicity Smoak / Overwatch","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/45.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/45.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/207"}}},"self":false,"voice":false},{"person":{"id":280,"url":"http://www.tvmaze.com/people/280/paul-blackthorne","name":"Paul Blackthorne","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"birthday":"1969-03-05","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/2/7050.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/2/7050.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/280"}}},"character":{"id":211,"url":"http://www.tvmaze.com/characters/211/arrow-detective-quentin-lance","name":"Detective Quentin Lance","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/49.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/49.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/211"}}},"self":false,"voice":false},{"person":{"id":275,"url":"http://www.tvmaze.com/people/275/willa-holland","name":"Willa Holland","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1991-06-18","deathday":null,"gender":"Female","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/1811.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/1811.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/275"}}},"character":{"id":206,"url":"http://www.tvmaze.com/characters/206/arrow-thea-queen-speedy","name":"Thea Queen / Speedy","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/59.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/59.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/206"}}},"self":false,"voice":false},{"person":{"id":272,"url":"http://www.tvmaze.com/people/272/katie-cassidy","name":"Katie Cassidy","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1986-11-25","deathday":null,"gender":"Female","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/97/243909.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/97/243909.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/272"}}},"character":{"id":203,"url":"http://www.tvmaze.com/characters/203/arrow-laurel-lance-black-canary","name":"Laurel Lance / Black Canary","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/50.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/50.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/203"}}},"self":false,"voice":false},{"person":{"id":45912,"url":"http://www.tvmaze.com/people/45912/echo-kellum","name":"Echo Kellum","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1982-08-29","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/8/21934.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/8/21934.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/45912"}}},"character":{"id":175076,"url":"http://www.tvmaze.com/characters/175076/arrow-curtis-holt-mr-terrific","name":"Curtis Holt / Mr. Terrific","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/94/237164.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/94/237164.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/175076"}}},"self":false,"voice":false},{"person":{"id":277,"url":"http://www.tvmaze.com/people/277/colton-haynes","name":"Colton Haynes","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1988-07-13","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/2/7047.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/2/7047.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/277"}}},"character":{"id":208,"url":"http://www.tvmaze.com/characters/208/arrow-roy-harper-arsenal","name":"Roy Harper / Arsenal","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/48.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/48.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/208"}}},"self":false,"voice":false},{"person":{"id":281,"url":"http://www.tvmaze.com/people/281/john-barrowman","name":"John Barrowman","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"birthday":"1967-03-11","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/89/223350.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/89/223350.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/281"}}},"character":{"id":212,"url":"http://www.tvmaze.com/characters/212/arrow-malcolm-merlyn","name":"Malcolm Merlyn","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/55.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/55.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/212"}}},"self":false,"voice":false},{"person":{"id":10897,"url":"http://www.tvmaze.com/people/10897/rick-gonzalez","name":"Rick Gonzalez","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1979-06-30","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/96/240147.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/96/240147.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/10897"}}},"character":{"id":327886,"url":"http://www.tvmaze.com/characters/327886/arrow-rene-ramirez-wild-dog","name":"Rene Ramirez / Wild Dog","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/83/208557.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/83/208557.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/327886"}}},"self":false,"voice":false},{"person":{"id":34387,"url":"http://www.tvmaze.com/people/34387/juliana-harkavy","name":"Juliana Harkavy","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1985-01-01","deathday":null,"gender":"Female","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/2/6006.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/2/6006.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/34387"}}},"character":{"id":369222,"url":"http://www.tvmaze.com/characters/369222/arrow-dinah-drake-black-canary","name":"Dinah Drake / Black Canary","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/96/240596.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/96/240596.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/369222"}}},"self":false,"voice":false},{"person":{"id":279,"url":"http://www.tvmaze.com/people/279/susanna-thompson","name":"Susanna Thompson","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1958-01-27","deathday":null,"gender":"Female","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/2/7048.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/2/7048.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/279"}}},"character":{"id":210,"url":"http://www.tvmaze.com/characters/210/arrow-moira-queen","name":"Moira Queen","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/58.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/58.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/210"}}},"self":false,"voice":false},{"person":{"id":278,"url":"http://www.tvmaze.com/people/278/manu-bennett","name":"Manu Bennett","country":{"name":"New Zealand","code":"NZ","timezone":"Pacific/Auckland"},"birthday":"1969-10-10","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/39/98580.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/39/98580.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/278"}}},"character":{"id":353287,"url":"http://www.tvmaze.com/characters/353287/arrow-slade-wilson-deathstroke","name":"Slade Wilson / Deathstroke","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/47.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/47.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/353287"}}},"self":false,"voice":false},{"person":{"id":272,"url":"http://www.tvmaze.com/people/272/katie-cassidy","name":"Katie Cassidy","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1986-11-25","deathday":null,"gender":"Female","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/97/243909.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/97/243909.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/272"}}},"character":{"id":373737,"url":"http://www.tvmaze.com/characters/373737/arrow-laurel-lance-earth-two-black-siren","name":"Laurel Lance (Earth Two) / Black Siren","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/217/542829.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/217/542829.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/373737"}}},"self":false,"voice":false},{"person":{"id":273,"url":"http://www.tvmaze.com/people/273/colin-donnell","name":"Colin Donnell","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1982-10-09","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/108/272392.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/108/272392.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/273"}}},"character":{"id":204,"url":"http://www.tvmaze.com/characters/204/arrow-tommy-merlyn","name":"Tommy Merlyn","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/0/60.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/0/60.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/204"}}},"self":false,"voice":false},{"person":{"id":2086,"url":"http://www.tvmaze.com/people/2086/kirk-acevedo","name":"Kirk Acevedo","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1971-11-27","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/2/6003.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/2/6003.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/2086"}}},"character":{"id":474077,"url":"http://www.tvmaze.com/characters/474077/arrow-ricardo-diaz-dragon","name":"Ricardo Diaz / Dragon","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/135/338508.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/135/338508.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/474077"}}},"self":false,"voice":false},{"person":{"id":918,"url":"http://www.tvmaze.com/people/918/josh-segarra","name":"Josh Segarra","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1986-06-03","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/82/205134.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/82/205134.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/918"}}},"character":{"id":333050,"url":"http://www.tvmaze.com/characters/333050/arrow-adrian-chase","name":"Adrian Chase","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/83/208559.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/83/208559.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/333050"}}},"self":false,"voice":false},{"person":{"id":2311,"url":"http://www.tvmaze.com/people/2311/ben-lewis","name":"Ben Lewis","country":null,"birthday":null,"deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/54/136041.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/54/136041.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/2311"}}},"character":{"id":565272,"url":"http://www.tvmaze.com/characters/565272/arrow-william-clayton-adult","name":"William Clayton (Adult)","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/174/435148.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/174/435148.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/565272"}}},"self":false,"voice":false},{"person":{"id":15776,"url":"http://www.tvmaze.com/people/15776/katherine-mcnamara","name":"Katherine McNamara","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1995-11-22","deathday":null,"gender":"Female","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/82/205656.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/82/205656.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/15776"}}},"character":{"id":575111,"url":"http://www.tvmaze.com/characters/575111/arrow-mia-smoak-blackstar","name":"Mia Smoak / Blackstar","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/176/441305.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/176/441305.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/575111"}}},"self":false,"voice":false},{"person":{"id":221592,"url":"http://www.tvmaze.com/people/221592/sea-shimooka","name":"Sea Shimooka","country":null,"birthday":null,"deathday":null,"gender":"Female","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/176/441150.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/176/441150.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/221592"}}},"character":{"id":576239,"url":"http://www.tvmaze.com/characters/576239/arrow-emiko-queen","name":"Emiko Queen","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/176/441306.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/176/441306.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/576239"}}},"self":false,"voice":false},{"person":{"id":33235,"url":"http://www.tvmaze.com/people/33235/joseph-david-jones","name":"Joseph David-Jones","country":null,"birthday":null,"deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/45/113197.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/45/113197.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/33235"}}},"character":{"id":593818,"url":"http://www.tvmaze.com/characters/593818/arrow-connor-hawke","name":"Connor Hawke","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/183/459172.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/183/459172.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/593818"}}},"self":false,"voice":false},{"person":{"id":10433,"url":"http://www.tvmaze.com/people/10433/lamonica-garrett","name":"LaMonica Garrett","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1975-05-23","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/175/438444.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/175/438444.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/10433"}}},"character":{"id":573399,"url":"http://www.tvmaze.com/characters/573399/arrow-mar-novu-the-monitor","name":"Mar Novu / The Monitor","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/175/439922.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/175/439922.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/573399"}}},"self":false,"voice":false},{"person":{"id":10897,"url":"http://www.tvmaze.com/people/10897/rick-gonzalez","name":"Rick Gonzalez","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1979-06-30","deathday":null,"gender":"Male","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/96/240147.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/96/240147.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/10897"}}},"character":{"id":667457,"url":"http://www.tvmaze.com/characters/667457/arrow-rene-ramirez-earth-two","name":"Rene Ramirez (Earth Two)","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/216/541088.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/216/541088.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/667457"}}},"self":false,"voice":false},{"person":{"id":34387,"url":"http://www.tvmaze.com/people/34387/juliana-harkavy","name":"Juliana Harkavy","country":{"name":"United States","code":"US","timezone":"America/New_York"},"birthday":"1985-01-01","deathday":null,"gender":"Female","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/2/6006.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/2/6006.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/people/34387"}}},"character":{"id":667458,"url":"http://www.tvmaze.com/characters/667458/arrow-sergeant-dinah-drake-earth-two","name":"Sergeant Dinah Drake (Earth Two)","image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/216/541089.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/216/541089.jpg"},"_links":{"self":{"href":"http://api.tvmaze.com/characters/667458"}}},"self":false,"voice":false}]
+[{
+    "person": {
+        "id": 271,
+        "url": "http://www.tvmaze.com/people/271/stephen-amell",
+        "name": "Stephen Amell",
+        "country": {
+            "name": "Canada",
+            "code": "CA",
+            "timezone": "America/Halifax"
+        },
+        "birthday": "1981-05-08",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/42/106974.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/42/106974.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/271"
+            }
+        }
+    },
+    "character": {
+        "id": 202,
+        "url": "http://www.tvmaze.com/characters/202/arrow-oliver-queen-the-hood-the-arrow-green-arrow",
+        "name": "Oliver Queen / The Hood / The Arrow / Green Arrow",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/44.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/44.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/202"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 274,
+        "url": "http://www.tvmaze.com/people/274/david-ramsey",
+        "name": "David Ramsey",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1971-11-17",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/1/2927.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/1/2927.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/274"
+            }
+        }
+    },
+    "character": {
+        "id": 205,
+        "url": "http://www.tvmaze.com/characters/205/arrow-john-diggle-spartan",
+        "name": "John Diggle / Spartan",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/46.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/46.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/205"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 276,
+        "url": "http://www.tvmaze.com/people/276/emily-bett-rickards",
+        "name": "Emily Bett Rickards",
+        "country": {
+            "name": "Canada",
+            "code": "CA",
+            "timezone": "America/Halifax"
+        },
+        "birthday": "1991-07-24",
+        "deathday": null,
+        "gender": "Female",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/2/6079.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/2/6079.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/276"
+            }
+        }
+    },
+    "character": {
+        "id": 207,
+        "url": "http://www.tvmaze.com/characters/207/arrow-felicity-smoak-overwatch",
+        "name": "Felicity Smoak / Overwatch",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/45.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/45.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/207"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 280,
+        "url": "http://www.tvmaze.com/people/280/paul-blackthorne",
+        "name": "Paul Blackthorne",
+        "country": {
+            "name": "United Kingdom",
+            "code": "GB",
+            "timezone": "Europe/London"
+        },
+        "birthday": "1969-03-05",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/2/7050.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/2/7050.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/280"
+            }
+        }
+    },
+    "character": {
+        "id": 211,
+        "url": "http://www.tvmaze.com/characters/211/arrow-detective-quentin-lance",
+        "name": "Detective Quentin Lance",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/49.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/49.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/211"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 275,
+        "url": "http://www.tvmaze.com/people/275/willa-holland",
+        "name": "Willa Holland",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1991-06-18",
+        "deathday": null,
+        "gender": "Female",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/1811.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/1811.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/275"
+            }
+        }
+    },
+    "character": {
+        "id": 206,
+        "url": "http://www.tvmaze.com/characters/206/arrow-thea-queen-speedy",
+        "name": "Thea Queen / Speedy",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/59.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/59.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/206"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 272,
+        "url": "http://www.tvmaze.com/people/272/katie-cassidy",
+        "name": "Katie Cassidy",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1986-11-25",
+        "deathday": null,
+        "gender": "Female",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/97/243909.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/97/243909.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/272"
+            }
+        }
+    },
+    "character": {
+        "id": 203,
+        "url": "http://www.tvmaze.com/characters/203/arrow-laurel-lance-black-canary",
+        "name": "Laurel Lance / Black Canary",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/50.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/50.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/203"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 45912,
+        "url": "http://www.tvmaze.com/people/45912/echo-kellum",
+        "name": "Echo Kellum",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1982-08-29",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/8/21934.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/8/21934.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/45912"
+            }
+        }
+    },
+    "character": {
+        "id": 175076,
+        "url": "http://www.tvmaze.com/characters/175076/arrow-curtis-holt-mr-terrific",
+        "name": "Curtis Holt / Mr. Terrific",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/94/237164.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/94/237164.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/175076"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 277,
+        "url": "http://www.tvmaze.com/people/277/colton-haynes",
+        "name": "Colton Haynes",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1988-07-13",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/2/7047.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/2/7047.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/277"
+            }
+        }
+    },
+    "character": {
+        "id": 208,
+        "url": "http://www.tvmaze.com/characters/208/arrow-roy-harper-arsenal",
+        "name": "Roy Harper / Arsenal",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/48.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/48.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/208"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 281,
+        "url": "http://www.tvmaze.com/people/281/john-barrowman",
+        "name": "John Barrowman",
+        "country": {
+            "name": "United Kingdom",
+            "code": "GB",
+            "timezone": "Europe/London"
+        },
+        "birthday": "1967-03-11",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/89/223350.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/89/223350.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/281"
+            }
+        }
+    },
+    "character": {
+        "id": 212,
+        "url": "http://www.tvmaze.com/characters/212/arrow-malcolm-merlyn",
+        "name": "Malcolm Merlyn",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/55.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/55.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/212"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 10897,
+        "url": "http://www.tvmaze.com/people/10897/rick-gonzalez",
+        "name": "Rick Gonzalez",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1979-06-30",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/96/240147.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/96/240147.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/10897"
+            }
+        }
+    },
+    "character": {
+        "id": 327886,
+        "url": "http://www.tvmaze.com/characters/327886/arrow-rene-ramirez-wild-dog",
+        "name": "Rene Ramirez / Wild Dog",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/83/208557.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/83/208557.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/327886"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 34387,
+        "url": "http://www.tvmaze.com/people/34387/juliana-harkavy",
+        "name": "Juliana Harkavy",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1985-01-01",
+        "deathday": null,
+        "gender": "Female",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/2/6006.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/2/6006.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/34387"
+            }
+        }
+    },
+    "character": {
+        "id": 369222,
+        "url": "http://www.tvmaze.com/characters/369222/arrow-dinah-drake-black-canary",
+        "name": "Dinah Drake / Black Canary",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/96/240596.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/96/240596.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/369222"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 279,
+        "url": "http://www.tvmaze.com/people/279/susanna-thompson",
+        "name": "Susanna Thompson",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1958-01-27",
+        "deathday": null,
+        "gender": "Female",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/2/7048.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/2/7048.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/279"
+            }
+        }
+    },
+    "character": {
+        "id": 210,
+        "url": "http://www.tvmaze.com/characters/210/arrow-moira-queen",
+        "name": "Moira Queen",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/58.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/58.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/210"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 278,
+        "url": "http://www.tvmaze.com/people/278/manu-bennett",
+        "name": "Manu Bennett",
+        "country": {
+            "name": "New Zealand",
+            "code": "NZ",
+            "timezone": "Pacific/Auckland"
+        },
+        "birthday": "1969-10-10",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/39/98580.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/39/98580.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/278"
+            }
+        }
+    },
+    "character": {
+        "id": 353287,
+        "url": "http://www.tvmaze.com/characters/353287/arrow-slade-wilson-deathstroke",
+        "name": "Slade Wilson / Deathstroke",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/47.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/47.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/353287"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 272,
+        "url": "http://www.tvmaze.com/people/272/katie-cassidy",
+        "name": "Katie Cassidy",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1986-11-25",
+        "deathday": null,
+        "gender": "Female",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/97/243909.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/97/243909.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/272"
+            }
+        }
+    },
+    "character": {
+        "id": 373737,
+        "url": "http://www.tvmaze.com/characters/373737/arrow-laurel-lance-earth-two-black-siren",
+        "name": "Laurel Lance (Earth Two) / Black Siren",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/217/542829.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/217/542829.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/373737"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 273,
+        "url": "http://www.tvmaze.com/people/273/colin-donnell",
+        "name": "Colin Donnell",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1982-10-09",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/108/272392.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/108/272392.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/273"
+            }
+        }
+    },
+    "character": {
+        "id": 204,
+        "url": "http://www.tvmaze.com/characters/204/arrow-tommy-merlyn",
+        "name": "Tommy Merlyn",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/60.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/60.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/204"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 2086,
+        "url": "http://www.tvmaze.com/people/2086/kirk-acevedo",
+        "name": "Kirk Acevedo",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1971-11-27",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/2/6003.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/2/6003.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/2086"
+            }
+        }
+    },
+    "character": {
+        "id": 474077,
+        "url": "http://www.tvmaze.com/characters/474077/arrow-ricardo-diaz-dragon",
+        "name": "Ricardo Diaz / Dragon",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/135/338508.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/135/338508.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/474077"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 918,
+        "url": "http://www.tvmaze.com/people/918/josh-segarra",
+        "name": "Josh Segarra",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1986-06-03",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/82/205134.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/82/205134.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/918"
+            }
+        }
+    },
+    "character": {
+        "id": 333050,
+        "url": "http://www.tvmaze.com/characters/333050/arrow-adrian-chase",
+        "name": "Adrian Chase",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/83/208559.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/83/208559.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/333050"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 2311,
+        "url": "http://www.tvmaze.com/people/2311/ben-lewis",
+        "name": "Ben Lewis",
+        "country": null,
+        "birthday": null,
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/54/136041.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/54/136041.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/2311"
+            }
+        }
+    },
+    "character": {
+        "id": 565272,
+        "url": "http://www.tvmaze.com/characters/565272/arrow-william-clayton-adult",
+        "name": "William Clayton (Adult)",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/174/435148.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/174/435148.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/565272"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 15776,
+        "url": "http://www.tvmaze.com/people/15776/katherine-mcnamara",
+        "name": "Katherine McNamara",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1995-11-22",
+        "deathday": null,
+        "gender": "Female",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/82/205656.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/82/205656.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/15776"
+            }
+        }
+    },
+    "character": {
+        "id": 575111,
+        "url": "http://www.tvmaze.com/characters/575111/arrow-mia-smoak-blackstar",
+        "name": "Mia Smoak / Blackstar",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/176/441305.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/176/441305.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/575111"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 221592,
+        "url": "http://www.tvmaze.com/people/221592/sea-shimooka",
+        "name": "Sea Shimooka",
+        "country": null,
+        "birthday": null,
+        "deathday": null,
+        "gender": "Female",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/176/441150.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/176/441150.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/221592"
+            }
+        }
+    },
+    "character": {
+        "id": 576239,
+        "url": "http://www.tvmaze.com/characters/576239/arrow-emiko-queen",
+        "name": "Emiko Queen",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/176/441306.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/176/441306.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/576239"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 33235,
+        "url": "http://www.tvmaze.com/people/33235/joseph-david-jones",
+        "name": "Joseph David-Jones",
+        "country": null,
+        "birthday": null,
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/45/113197.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/45/113197.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/33235"
+            }
+        }
+    },
+    "character": {
+        "id": 593818,
+        "url": "http://www.tvmaze.com/characters/593818/arrow-connor-hawke",
+        "name": "Connor Hawke",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/183/459172.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/183/459172.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/593818"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 10433,
+        "url": "http://www.tvmaze.com/people/10433/lamonica-garrett",
+        "name": "LaMonica Garrett",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1975-05-23",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/175/438444.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/175/438444.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/10433"
+            }
+        }
+    },
+    "character": {
+        "id": 573399,
+        "url": "http://www.tvmaze.com/characters/573399/arrow-mar-novu-the-monitor",
+        "name": "Mar Novu / The Monitor",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/175/439922.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/175/439922.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/573399"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 10897,
+        "url": "http://www.tvmaze.com/people/10897/rick-gonzalez",
+        "name": "Rick Gonzalez",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1979-06-30",
+        "deathday": null,
+        "gender": "Male",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/96/240147.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/96/240147.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/10897"
+            }
+        }
+    },
+    "character": {
+        "id": 667457,
+        "url": "http://www.tvmaze.com/characters/667457/arrow-rene-ramirez-earth-two",
+        "name": "Rene Ramirez (Earth Two)",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/216/541088.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/216/541088.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/667457"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}, {
+    "person": {
+        "id": 34387,
+        "url": "http://www.tvmaze.com/people/34387/juliana-harkavy",
+        "name": "Juliana Harkavy",
+        "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+        },
+        "birthday": "1985-01-01",
+        "deathday": null,
+        "gender": "Female",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/2/6006.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/2/6006.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/people/34387"
+            }
+        }
+    },
+    "character": {
+        "id": 667458,
+        "url": "http://www.tvmaze.com/characters/667458/arrow-sergeant-dinah-drake-earth-two",
+        "name": "Sergeant Dinah Drake (Earth Two)",
+        "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/216/541089.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/216/541089.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "http://api.tvmaze.com/characters/667458"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}]

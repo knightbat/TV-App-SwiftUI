@@ -31,6 +31,7 @@ struct DetailsView: View {
                 .blur(radius: 30)
                 .scaledToFill()
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                .edgesIgnoringSafeArea(.all)
             
             VStack {
                 ScrollView {
@@ -85,6 +86,8 @@ struct DetailsInfoView: View {
             }
         }
         .padding(10)
+        .background(Color.white.opacity(0.5))
+        .cornerRadius(5.0)
     }
     
 }
@@ -156,8 +159,8 @@ struct SeasonListView: View {
                             .font(.system(size: 35))
                             .frame(width: 70, height: 70, alignment: .center)
                             .background(Color.gray)
-                            .cornerRadius(70/2)
                             .foregroundColor(Color.white)
+                            .clipShape(Circle())
                     }
                     
                 }
@@ -170,10 +173,9 @@ struct IconImageView: View {
     var image: String
     var body: some View {
         ImageView(image: image)
-            .scaledToFill()
-            .aspectRatio(contentMode: .fill)
+            .aspectRatio(contentMode: .fit)
             .frame(width: 100, height: 100, alignment: .center)
-            .cornerRadius(50)
+            .clipShape(Circle())
     }
 }
 
@@ -189,14 +191,14 @@ struct CastCrewListView: View {
             ForEach(isCast ? casts : crews) { cast in
                 HStack{
                     IconImageView(image: cast.person?.image?.medium ?? "")
-                        .padding([.leading, .top, .bottom], 5)
+                        .padding([.top, .leading, .bottom], 5)
                     VStack(alignment: .leading, spacing: 10) {
                         Text(cast.person?.name ?? "")
                             .font(.headline)
                         Text((self.isCast ? cast.character?.name : cast.type) ?? "")
                             .font(.subheadline)
                     }
-                    .padding([.leading], 5)
+                    .padding(.leading, 5)
                     Spacer()
                     if self.isCast {
                         IconImageView(image: cast.character?.image?.medium ?? "")
@@ -224,7 +226,11 @@ struct DetailsView_Previews: PreviewProvider {
 
 //        let cell = CastCrewListView(cast: SampleAPIResult.getDummyCasts())
         
-        return view
+        return
+            NavigationView {
+                view
+                    .navigationBarTitle("\(series.name ?? "")", displayMode: .inline)
+        }
     }
 }
 
