@@ -19,8 +19,10 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView() {
-            List(self.seriesStore.serieses) { series in
-                SeriesCell(series : series)
+            List{
+                ForEach(self.seriesStore.serieses) { series in
+                    SeriesCell(series : series)
+                }
             }
             .navigationBarTitle("Shows", displayMode: .inline)
         }
@@ -36,26 +38,18 @@ struct SeriesCell: View {
         NavigationLink(destination: DetailsView(series: series)) {
             ZStack(alignment: .topTrailing) {
                 VStack(alignment: .center) {
-                    WebImage(url: URL(string: (series.image?.medium ?? "")))
+                    WebImage(url: URL(string: (series.image?.original ?? "")))
                         .placeholder{Image(systemName: "camera")}
-                        .indicator(.activity)
-                        .animation(.easeInOut(duration: 0.5))
-                        .transition(.fade)
+                        .resizable()
                         .scaledToFit()
-                        .frame(maxWidth: UIScreen.main.bounds.width - 60, maxHeight: .infinity, alignment: .center)
-                        .padding(5)
-                    
+                        .frame(minWidth: UIScreen.main.bounds.width - 60, minHeight:(UIScreen.main.bounds.width - 60))
                     Text(String(series.name ?? ""))
                         .bold()
-                        .font(.largeTitle)
-                        .padding(1)
-                    
-                    Text(String(removeTags(from: series.summary)))
-                        .foregroundColor(.gray)
-                        .multilineTextAlignment(.leading)
-                        .padding(5)
-                    
+                        .multilineTextAlignment(.center)
+                        .font(.title)
+                        .padding(10)
                 }
+                
                 ZStack(alignment: .center) {
                     Image(systemName: "star.fill")
                         .resizable()
@@ -74,12 +68,6 @@ struct SeriesCell: View {
         }
     }
 }
-
-func removeTags(from string: String?) -> String {
-    let str = string?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
-    return str ?? ""
-}
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

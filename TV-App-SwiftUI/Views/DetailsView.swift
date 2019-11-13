@@ -60,6 +60,11 @@ struct DetailsInfoView: View {
     let series: Series
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
+            
+            HStack(alignment: .top) {
+                Text("Summary:")
+                Text(String(removeTags(from: series.summary)))
+            }
             HStack {
                 Text("Status :")
                 Text(series.status ?? "")
@@ -212,6 +217,13 @@ struct CastCrewListView: View {
         .padding(20)
     }
 }
+
+
+func removeTags(from string: String?) -> String {
+    let str = string?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+    return str ?? ""
+}
+
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
