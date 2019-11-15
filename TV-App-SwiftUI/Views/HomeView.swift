@@ -11,7 +11,9 @@ import SDWebImageSwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var seriesStore  = APIStore(with: .listSeries)
+    @ObservedObject var apiStore  = APIStore()
+    @State private var searchString = ""
+    @State private var pageNumber = 1
     
     init() {
         UITableView.appearance().separatorStyle = .none
@@ -19,12 +21,33 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView() {
-            List{
-                ForEach(self.seriesStore.serieses) { series in
-                    SeriesCell(series : series)
+            VStack {
+                TextField("Search", text: $searchString, onEditingChanged: { status in
+                    if !status && self.searchString != "" {
+                        self.apiStore.searchSeries(searchString: self.searchString)
+                        self.pageNumber = 1
+                    } else if !status && self.searchString == "" {
+                        self.apiStore.fetchSeries(pageNumber: self.pageNumber)
+                    }
+                })
+                    .padding(.all, 10.0)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                List{
+                    ForEach(self.apiStore.serieses) { series in
+                        SeriesCell(series : series)
+                            .onAppear {
+                                if series.id == self.apiStore.serieses.last?.id {
+                                    self.pageNumber += 1
+                                    self.apiStore.fetchSeries(pageNumber: self.pageNumber)
+                                }
+                        }
+                    }
+                }
+                .navigationBarTitle("Shows", displayMode: .inline)
+                .onAppear {
+                    self.searchString == "" ? self.apiStore.fetchSeries() : self.apiStore.searchSeries(searchString: self.searchString)
                 }
             }
-            .navigationBarTitle("Shows", displayMode: .inline)
         }
     }
 }
@@ -73,7 +96,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
         let content = HomeView()
-        content.seriesStore.serieses = SampleAPIResult.getDummySeries()
+        content.apiStore.serieses = SampleAPIResult.getDummySeries()
         return content
             .previewDevice("iPhone 7")
     }

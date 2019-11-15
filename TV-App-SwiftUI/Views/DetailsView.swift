@@ -11,17 +11,12 @@ import SDWebImageSwiftUI
 
 struct DetailsView: View {
     let series : Series
-    @ObservedObject var seasonStore: APIStore
-    @ObservedObject var castStore: APIStore
-    @ObservedObject var crewStore: APIStore
+    @ObservedObject var apiStore = APIStore()
     @State private var isCast: Bool = true
-
+    
     
     init(series: Series) {
         self.series = series
-        seasonStore = APIStore(with: series.id ?? 0, type: .listseasons)
-        castStore = APIStore(with: series.id ?? 0, type: .listCast)
-        crewStore = APIStore(with: series.id ?? 0, type: .listCrew)
     }
     
     var body: some View {
@@ -40,16 +35,24 @@ struct DetailsView: View {
                         ImageView(image: series.image?.original ?? "")
                             .frame(width: 350, height: 350, alignment: .center)
                         DetailsInfoView(series: series)
-                        SeasonListView(seasons: seasonStore.seasons, seriesID: self.series.id ?? 0)
+                        SeasonListView(seasons: apiStore.seasons, seriesID: self.series.id ?? 0)
                         CastCrewView(isCast: $isCast)
-                        CastCrewListView(casts: castStore.casts, crews: crewStore.crews, isCast: $isCast)
-
+                        CastCrewListView(casts: apiStore.casts, crews: apiStore.crews, isCast: $isCast)
+                        
                     }
                 }
                 .background(Color.clear)
             }
-            .navigationBarTitle(series.name ?? "")
+            .onAppear(perform: {
+                
+                self.apiStore.fetchSeason(with: self.series.id ?? 0)
+                self.apiStore.fetchCasts(with: self.series.id ?? 0)
+                self.apiStore.fetchCrews(with: self.series.id ?? 0)
+                
+            })
+                .navigationBarTitle(series.name ?? "")
         }
+        
     }
 }
 
@@ -105,8 +108,6 @@ struct ImageView: View {
             .placeholder{Image(systemName: "camera")}
             .resizable()
             .indicator(.activity)
-            .animation(.easeInOut(duration: 0.5))
-            .transition(.fade)
             .scaledToFit()
             .padding(5)
     }
@@ -230,11 +231,10 @@ struct DetailsView_Previews: PreviewProvider {
         
         let series = SampleAPIResult.getDummySeries()[3]
         var view = DetailsView(series: series)
-        view.seasonStore =  APIStore()
-        view.castStore = APIStore()
-        view.seasonStore.seasons = SampleAPIResult.getDummySeasons()
-        view.castStore.casts = SampleAPIResult.getDummyCasts()
-        view.crewStore.crews = SampleAPIResult.getDummyCrew()
+        view.apiStore =  APIStore()
+        view.apiStore.seasons = SampleAPIResult.getDummySeasons()
+        view.apiStore.casts = SampleAPIResult.getDummyCasts()
+        view.apiStore.crews = SampleAPIResult.getDummyCrew()
 
 //        let cell = CastCrewListView(cast: SampleAPIResult.getDummyCasts())
         

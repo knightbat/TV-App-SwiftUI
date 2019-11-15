@@ -14,28 +14,32 @@ class ApiMapper {
     
     func callAPI<T: Codable>(withPath pathString: String, params : [(String, String)], andMappingModel model: T.Type, callback: @escaping (Result<T, Error>) -> Void ) {
         
-        let url = self.generateURL(withPath: pathString , andParams: [])
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            do {
-                let jsonDecoder = JSONDecoder()
-                let responseModel = try jsonDecoder.decode(model, from: data!)
-                 callback(Result.success(responseModel))
-            } catch {
-                callback(Result.failure(error))
+        if let url = self.generateURL(withPath: pathString , andParams: params) {
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    let responseModel = try jsonDecoder.decode(model, from: data!)
+                    callback(Result.success(responseModel))
+                } catch {
+                    callback(Result.failure(error))
+                }
             }
+            task.resume()
+        } else {
+            callback(Result.failure(URLError(.badURL)))
         }
-        task.resume()
     }
     
     //MARK: helper methods
     
-   private func generateURL(withPath path: String, andParams params: [(String, String)]) -> URL {
+    private func generateURL(withPath path: String, andParams params: [(String, String)]) -> URL? {
         
-        var urlComp = URLComponents(string: AppData.baseUrl)!
+        guard var urlComp = URLComponents(string: AppData.baseUrl) else {return nil}
+        urlComp.queryItems = [URLQueryItem]()
         for param in params {
             urlComp.queryItems?.append(URLQueryItem(name: param.0, value: param.1))
         }
-        var url = urlComp.url!
+        guard var  url = urlComp.url else {return nil}
         url = url.appendingPathComponent(path)
         return url
     }

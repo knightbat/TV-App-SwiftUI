@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EpisodeView: View {
     
-    @ObservedObject var episodeStore: APIStore
+    @ObservedObject var apiStore = APIStore()
     @State var selectedSeason: Int
     var seasonArray: [Season]
     var seriesID: Int
@@ -19,7 +19,6 @@ struct EpisodeView: View {
         self.seriesID = seriesID
         self.seasonArray = seasonArray
         _selectedSeason = State(initialValue: selectedSeason)
-        self.episodeStore = APIStore(with: seriesID, type: .listEpisodes)
         UITableView.appearance().backgroundColor = .clear
         UITableViewCell.appearance().backgroundColor = .clear
     }
@@ -53,10 +52,14 @@ struct EpisodeView: View {
                 
                 
                 List{
-                    ForEach(episodeStore.episodes.filter({$0.airedSeason == self.selectedSeason})){ episode in
+                    ForEach(apiStore.episodes.filter({$0.airedSeason == self.selectedSeason})){ episode in
                         EpisodeCell(episode: episode)
                     }
                 }
+            }
+            .onAppear {
+                self.apiStore.fetchEpisodes(with: self.seriesID)
+
             }
         }
     .navigationBarTitle(Text("Season: \(self.selectedSeason)"))
@@ -107,9 +110,9 @@ struct EpisodeView_Previews: PreviewProvider {
         let episodes = SampleAPIResult.getDummyEpisodes()
         let seasons = SampleAPIResult.getDummySeasons()
         var view = EpisodeView(seriesID: 1, seasonArray: seasons, selectedSeason: 3)
-        let episodeStore = APIStore(with: .listEpisodes)
+        let episodeStore = APIStore()
         episodeStore.episodes = episodes
-        view.episodeStore = episodeStore
+        view.apiStore = episodeStore
         return view
     }
 }
