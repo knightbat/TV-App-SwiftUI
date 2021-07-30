@@ -104,7 +104,7 @@ struct DetailsInfoView: View {
 struct ImageView: View {
     var image: String
     var body: some View {
-        WebImage(url: URL(string: image))
+        AnimatedImage(url: URL(string: image))
             .placeholder{Image(systemName: "camera")}
             .resizable()
             .indicator(.activity)

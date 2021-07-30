@@ -30,15 +30,18 @@ struct HomeView: View {
                         self.apiStore.fetchSeries(pageNumber: self.pageNumber)
                     }
                 })
-                    .padding(.all, 10.0)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                List{
-                    ForEach(self.apiStore.serieses) { series in
-                        SeriesCell(series : series)
-                            .onAppear {
-                                if series.id == self.apiStore.serieses.last?.id {
-                                    self.pageNumber += 1
-                                    self.apiStore.fetchSeries(pageNumber: self.pageNumber)
+                .padding(.all, 2.0)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 5) {
+                        ForEach(self.apiStore.serieses) { series in
+                            SeriesCell(series : series)
+                                .onAppear {
+                                    if series.id == self.apiStore.serieses.last?.id {
+                                        self.pageNumber += 1
+                                        self.apiStore.fetchSeries(pageNumber: self.pageNumber)
+                                    }
                                 }
                         }
                     }
@@ -61,16 +64,17 @@ struct SeriesCell: View {
         NavigationLink(destination: DetailsView(series: series)) {
             ZStack(alignment: .topTrailing) {
                 VStack(alignment: .center) {
-                    WebImage(url: URL(string: (series.image?.original ?? "")))
+                    AnimatedImage(url: URL(string: (series.image?.original ?? "")))
                         .placeholder{Image(systemName: "camera")}
                         .resizable()
                         .scaledToFit()
-                        .frame(minWidth: UIScreen.main.bounds.width - 60, minHeight:(UIScreen.main.bounds.width - 60))
+                        .frame(minWidth: UIScreen.main.bounds.width/2 - 5, minHeight:(UIScreen.main.bounds.width/2 - 5))
                     Text(String(series.name ?? ""))
                         .bold()
                         .multilineTextAlignment(.center)
-                        .font(.title)
+                        .font(.system(size: 20))
                         .padding(10)
+                        .foregroundColor(Color("titleColor"))
                 }
                 
                 ZStack(alignment: .center) {
@@ -82,10 +86,11 @@ struct SeriesCell: View {
                         .padding()
                     Text(String.localizedStringWithFormat("%.1f", series.rating?.average ?? 0))
                         .font(.system(size: 11))
-                    .bold()
+                        .bold()
+                        .foregroundColor(.white)
                 }
             }
-            .background(Color.white)
+            .background(Color.clear)
             .cornerRadius(6)
             .shadow(radius: 5)
         }
