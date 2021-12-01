@@ -12,21 +12,19 @@ class ApiMapper {
     
     //MARK: Api Calls
     
-    func callAPI<T: Codable>(withPath pathString: String, params : [(String, String)], andMappingModel model: T.Type, callback: @escaping (Result<T, Error>) -> Void ) {
+    func callAPI<T: Codable>(withPath pathString: String, params : [(String, String)], andMappingModel model: T.Type) async -> (Result<T, Error>) {
         
         if let url = self.generateURL(withPath: pathString , andParams: params) {
-            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                do {
-                    let jsonDecoder = JSONDecoder()
-                    let responseModel = try jsonDecoder.decode(model, from: data!)
-                    callback(Result.success(responseModel))
-                } catch {
-                    callback(Result.failure(error))
-                }
+            do {
+                let (data, _) = try await URLSession.shared.data(from: url)
+                let jsonDecoder = JSONDecoder()
+                let responseModel = try jsonDecoder.decode(model, from: data)
+                return Result.success(responseModel)
+            } catch {
+                return (Result.failure(URLError(.badServerResponse)))
             }
-            task.resume()
         } else {
-            callback(Result.failure(URLError(.badURL)))
+            return Result.failure(URLError(.badURL))
         }
     }
     

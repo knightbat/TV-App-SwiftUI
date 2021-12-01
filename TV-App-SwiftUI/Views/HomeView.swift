@@ -64,7 +64,7 @@ struct SeriesCell: View {
         NavigationLink(destination: DetailsView(series: series)) {
             ZStack(alignment: .topTrailing) {
                 VStack(alignment: .center) {
-                    AnimatedImage(url: URL(string: (series.image?.original ?? "")))
+                    WebImage(url: URL(string: (series.image?.original ?? "")))
                         .placeholder{Image(systemName: "camera")}
                         .resizable()
                         .scaledToFit()
@@ -73,10 +73,9 @@ struct SeriesCell: View {
                         .bold()
                         .multilineTextAlignment(.center)
                         .font(.system(size: 20))
-                        .padding(10)
+                        .padding(5)
                         .foregroundColor(Color("titleColor"))
                 }
-                
                 ZStack(alignment: .center) {
                     Image(systemName: "star.fill")
                         .resizable()
@@ -90,7 +89,7 @@ struct SeriesCell: View {
                         .foregroundColor(.white)
                 }
             }
-            .background(Color.clear)
+            .background(Color.blue)
             .cornerRadius(6)
             .shadow(radius: 5)
         }

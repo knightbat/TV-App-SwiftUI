@@ -94,7 +94,7 @@ struct DetailsInfoView: View {
             }
         }
         .padding(10)
-        .background(Color.white.opacity(0.5))
+        .background(Color("backgroundColor").opacity(0.5))
         .cornerRadius(5.0)
     }
     
@@ -104,12 +104,11 @@ struct DetailsInfoView: View {
 struct ImageView: View {
     var image: String
     var body: some View {
-        AnimatedImage(url: URL(string: image))
+        WebImage(url: URL(string: image))
             .placeholder{Image(systemName: "camera")}
             .resizable()
             .indicator(.activity)
             .scaledToFit()
-            .padding(5)
     }
 }
 
@@ -178,8 +177,10 @@ struct SeasonListView: View {
 struct IconImageView: View {
     var image: String
     var body: some View {
-        ImageView(image: image)
-            .aspectRatio(contentMode: .fit)
+        WebImage(url: URL(string: image))
+            .resizable()
+            .indicator(.activity)
+            .scaledToFill()
             .frame(width: 100, height: 100, alignment: .center)
             .clipShape(Circle())
     }
@@ -211,7 +212,7 @@ struct CastCrewListView: View {
                             .padding([.trailing, .top, .bottom], 5)
                     }
                 }
-                .background(Color.white.opacity(0.8))
+                .background(Color("backgroundColor").opacity(0.8))
                 .cornerRadius(6)
             }
         }
@@ -229,7 +230,7 @@ func removeTags(from string: String?) -> String {
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
         
-        let series = SampleAPIResult.getDummySeries()[3]
+        let series = SampleAPIResult.getDummySeries()[1]
         var view = DetailsView(series: series)
         view.apiStore =  APIStore()
         view.apiStore.seasons = SampleAPIResult.getDummySeasons()

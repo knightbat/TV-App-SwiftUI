@@ -25,8 +25,7 @@ class APIStore: ObservableObject {
     @Published var casts: [CastCrew] = []
     @Published var crews: [CastCrew] = []
 
-    
-    
+        
     init() {
         serieses = []
         seasons = []
@@ -35,16 +34,16 @@ class APIStore: ObservableObject {
         crews = []
     }
     
-    func fetchSeries(pageNumber: Int = 1)  {
-        
+    func fetchSeries(pageNumber: Int = 1) {
         let params = [
             ("page", String(pageNumber))
         ]
-        ApiMapper().callAPI(withPath: AppData.show, params: params, andMappingModel: [Series].self) { [weak self] (result) in
+        Task {
+            let result = await ApiMapper().callAPI(withPath: AppData.show, params: params, andMappingModel: [Series].self)
             switch(result) {
             case .success(let serieses):
                 DispatchQueue.main.async {
-                    self?.serieses = serieses
+                    self.serieses = serieses
                 }
             case .failure(_):
                 break
@@ -54,31 +53,33 @@ class APIStore: ObservableObject {
     
     
     func searchSeries(searchString: String)  {
-           
-           let params = [
-               ("q", searchString)
-           ]
-           ApiMapper().callAPI(withPath: AppData.search, params: params, andMappingModel: [SearchResult].self) { [weak self] (result) in
-               switch(result) {
-               case .success(let searchResult):
-                   DispatchQueue.main.async {
-                    self?.serieses = searchResult.compactMap({$0.series})
-                   }
-               case .failure(_):
-                   break
-               }
-           }
-       }
+        let params = [
+            ("q", searchString)
+        ]
+        Task {
+            
+            let result = await ApiMapper().callAPI(withPath: AppData.search, params: params, andMappingModel: [SearchResult].self)
+            switch(result) {
+            case .success(let searchResult):
+                DispatchQueue.main.async {
+                    self.serieses = searchResult.compactMap({$0.series})
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
     
     
     func fetchSeason(with seriesID: Int)  {
-        
         let path = "\(AppData.shows)\(seriesID)\(AppData.season)"
-        ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [Season].self) { [weak self] (result) in
+        Task {
+            let result = await ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [Season].self)
             switch(result) {
             case .success(let seasons):
                 DispatchQueue.main.async {
-                    self?.seasons = seasons
+                    self.seasons = seasons
                 }
             case .failure(_):
                 break
@@ -88,12 +89,12 @@ class APIStore: ObservableObject {
     
     func fetchEpisodes(with seriesID: Int)  {
         let path = "\(AppData.shows)\(seriesID)\(AppData.episodes)"
-        
-        ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [Episode].self) { [weak self] (result) in
+        Task {
+            let result = await ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [Episode].self)
             switch(result) {
             case .success(let episodes):
                 DispatchQueue.main.async {
-                    self?.episodes = episodes
+                    self.episodes = episodes
                 }
             case .failure(_):
                 break
@@ -102,32 +103,32 @@ class APIStore: ObservableObject {
     }
     
     func fetchCasts(with seriesID: Int)  {
-         let path = "\(AppData.shows)\(seriesID)\(AppData.cast)"
-
-         ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [CastCrew].self) { [weak self] (result) in
-             switch(result) {
-             case .success(let casts):
-                 DispatchQueue.main.async {
-                     self?.casts = casts
-                 }
-             case .failure(_):
-                 break
-             }
-         }
-     }
+        let path = "\(AppData.shows)\(seriesID)\(AppData.cast)"
+        Task {
+            let result = await ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [CastCrew].self)
+            switch(result) {
+            case .success(let casts):
+                DispatchQueue.main.async {
+                    self.casts = casts
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
     
     func fetchCrews(with seriesID: Int)  {
-         let path = "\(AppData.shows)\(seriesID)\(AppData.crew)"
-
-         ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [CastCrew].self) { [weak self] (result) in
-             switch(result) {
-             case .success(let casts):
-                 DispatchQueue.main.async {
-                     self?.crews = casts
-                 }
-             case .failure(_):
-                 break
-             }
-         }
-     }
+        let path = "\(AppData.shows)\(seriesID)\(AppData.crew)"
+        Task {
+            let result = await ApiMapper().callAPI(withPath: path, params: [], andMappingModel: [CastCrew].self)
+            switch(result) {
+            case .success(let casts):
+                DispatchQueue.main.async {
+                    self.crews = casts
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
 }
