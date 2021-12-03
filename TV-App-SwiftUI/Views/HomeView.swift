@@ -15,51 +15,42 @@ struct HomeView: View {
     @State private var searchString = ""
     @State private var pageNumber = 1
     
-    init() {
-        UITableView.appearance().separatorStyle = .none
-    }
-    
     var body: some View {
-        NavigationView() {
-            VStack {
-                TextField("Search", text: $searchString, onEditingChanged: { status in
-                    if !status && self.searchString != "" {
-                        self.apiStore.searchSeries(searchString: self.searchString)
-                        self.pageNumber = 1
-                    } else if !status && self.searchString == "" {
-                        self.apiStore.fetchSeries(pageNumber: self.pageNumber)
-                    }
-                })
-                .padding(.all, 2.0)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                ScrollView {
-                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 5) {
-                        ForEach(self.apiStore.serieses) { series in
-                            SeriesCell(series : series)
-                                .onAppear {
-                                    if series.id == self.apiStore.serieses.last?.id {
-                                        self.pageNumber += 1
-                                        self.apiStore.fetchSeries(pageNumber: self.pageNumber)
-                                    }
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 5) {
+                    ForEach(self.apiStore.serieses) { series in
+                        SeriesCell(series : series)
+                            .onAppear {
+                                if series.id == self.apiStore.serieses.last?.id {
+                                    self.pageNumber += 1
+                                    self.apiStore.fetchSeries(pageNumber: self.pageNumber)
                                 }
-                        }
+                            }
                     }
-                }
-                .navigationBarTitle("Shows", displayMode: .inline)
-                .onAppear {
-                    self.searchString == "" ? self.apiStore.fetchSeries() : self.apiStore.searchSeries(searchString: self.searchString)
                 }
             }
+            .searchable(text: self.$searchString)
+            .onChange(of: self.searchString, perform: { query in
+                if query != "" {
+                    self.apiStore.searchSeries(searchString:query)
+                    self.pageNumber = 1
+                } else if query == "" {
+                    self.apiStore.fetchSeries(pageNumber: self.pageNumber)
+                }
+            })
+            .navigationBarTitle("Shows", displayMode: .inline)
+            .onAppear {
+                self.searchString == "" ? self.apiStore.fetchSeries() : self.apiStore.searchSeries(searchString: self.searchString)
+            }
+            
         }
     }
 }
 
 
 struct SeriesCell: View {
-    
     var series: Series
-    
     var body: some View {
         NavigationLink(destination: DetailsView(series: series)) {
             ZStack(alignment: .topTrailing) {
