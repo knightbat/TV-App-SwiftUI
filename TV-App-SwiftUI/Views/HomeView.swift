@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 struct HomeView: View {
     
@@ -30,6 +29,7 @@ struct HomeView: View {
                     }
                 }
             }
+            
             .searchable(text: self.$searchString)
             .onChange(of: self.searchString, perform: { query in
                 if query != "" {
@@ -55,11 +55,13 @@ struct SeriesCell: View {
         NavigationLink(destination: DetailsView(series: series)) {
             ZStack(alignment: .topTrailing) {
                 VStack(alignment: .center) {
-                    WebImage(url: URL(string: (series.image?.original ?? "")))
-                        .placeholder{Image(systemName: "camera")}
-                        .resizable()
-                        .scaledToFit()
-                        .frame(minWidth: UIScreen.main.bounds.width/2 - 5, minHeight:(UIScreen.main.bounds.width/2 - 5))
+                    AsyncImage(url: URL(string: series.image?.original ?? "")) { image in
+                        image.resizable()
+                    } placeholder: {
+                        Image(systemName: "camera")
+                    }
+                    .scaledToFit()
+                    .frame(minWidth: UIScreen.main.bounds.width/2 - 5, minHeight:(UIScreen.main.bounds.width/2 - 5))
                     Text(String(series.name ?? ""))
                         .bold()
                         .multilineTextAlignment(.center)

@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 struct DetailsView: View {
     let series : Series
@@ -34,6 +33,7 @@ struct DetailsView: View {
                         
                         ImageView(image: series.image?.original ?? "")
                             .frame(width: 350, height: 350, alignment: .center)
+                            .background(Color.gray)
                         DetailsInfoView(series: series)
                         SeasonListView(seasons: apiStore.seasons, seriesID: self.series.id ?? 0)
                         CastCrewView(isCast: $isCast)
@@ -50,7 +50,7 @@ struct DetailsView: View {
                 self.apiStore.fetchCrews(with: self.series.id ?? 0)
                 
             })
-                .navigationBarTitle(series.name ?? "")
+            .navigationBarTitle(series.name ?? "")
         }
         
     }
@@ -104,11 +104,12 @@ struct DetailsInfoView: View {
 struct ImageView: View {
     var image: String
     var body: some View {
-        WebImage(url: URL(string: image))
-            .placeholder{Image(systemName: "camera")}
-            .resizable()
-            .indicator(.activity)
-            .scaledToFit()
+        AsyncImage(url: URL(string: image)) { image in
+            image.resizable()
+        } placeholder: {
+            Image(systemName: "camera")
+        }
+        .scaledToFit()
     }
 }
 
@@ -145,7 +146,6 @@ struct CastCrewView: View {
                 .foregroundColor(!isCast ? Color.black : Color.white)
             }
         }
-            
         .padding(.horizontal, 20)
     }
 }
@@ -177,12 +177,16 @@ struct SeasonListView: View {
 struct IconImageView: View {
     var image: String
     var body: some View {
-        WebImage(url: URL(string: image))
-            .resizable()
-            .indicator(.activity)
-            .scaledToFill()
-            .frame(width: 100, height: 100, alignment: .center)
-            .clipShape(Circle())
+        AsyncImage(url: URL(string: image)) { image in
+            image.resizable()
+        } placeholder: {
+            Image(systemName: "camera")
+        }
+        .scaledToFill()
+        .frame(width: 100, height: 100, alignment: .center)
+        .background(Color.gray)
+        .clipShape(Circle())
+
     }
 }
 
@@ -236,13 +240,13 @@ struct DetailsView_Previews: PreviewProvider {
         view.apiStore.seasons = SampleAPIResult.getDummySeasons()
         view.apiStore.casts = SampleAPIResult.getDummyCasts()
         view.apiStore.crews = SampleAPIResult.getDummyCrew()
-
-//        let cell = CastCrewListView(cast: SampleAPIResult.getDummyCasts())
+        
+        //        let cell = CastCrewListView(cast: SampleAPIResult.getDummyCasts())
         
         return
-            NavigationView {
-                view
-                    .navigationBarTitle("\(series.name ?? "")", displayMode: .inline)
+        NavigationView {
+            view
+                .navigationBarTitle("\(series.name ?? "")", displayMode: .inline)
         }
     }
 }
